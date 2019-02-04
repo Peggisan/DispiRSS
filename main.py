@@ -1,8 +1,10 @@
-# Made using Python 3.7.2
+# Made using Python 3.6.8
 
 import discord
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-TOKEN = "NTQxNDg0MzY2OTY3MzQxMDc3.DzgNng.rh9_dJ1qnYlicLdwgSjcRiGGPx4"
 
 client = discord.Client()
 
@@ -18,5 +20,8 @@ async def on_message(message):
 
 
 
+
+TOKEN = os.getenv("TOKEN")
+print(TOKEN)
 client.run(TOKEN)
 
